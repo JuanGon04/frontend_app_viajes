@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.weather-card {
+    background: url("./imagenes/2.png") !important;
+    color: white;
+    text-align: center;
+    width: 472px;
+    height: 475px;
+    padding: 50px 20px 20px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.weather-card h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.weather-icon img {
+    width: 80px;
+}
+
+.weather-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos en los extremos */
+    align-items: center; 
+    margin-top: 15px;
+}
+
+.info-box {
+    text-align: center;
+    font-size: 12px;
+    background: rgba(36, 36, 36, 0.1);
+    padding: 8px;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.info-box strong {
+    display: block;
+    font-size: 20px;
+    margin-top: 3px;
+}
