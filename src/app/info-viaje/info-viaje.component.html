@@ -42,70 +42,75 @@
   </div>
 </div>
 
-<div class="row mt-3">
-<div class="col-12 col-sm-6 col-md-6 col-xl-6 mb-6">
-  <div
-    *ngIf="clima$ | async as clima"
-    class="weather-card"
-  >
-    <h2>{{ clima.name }}, {{ clima.sys.country }}</h2>
-    <div class="weather-icon">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png"
-        alt="Tormenta eléctrica"
-      />
-    </div>
-    <h3>{{ clima.weather.description }}</h3>
-    <h4>{{ clima.main.temp_min }}°/{{ clima.main.temp_max }}°</h4>
-    <div class="mt-4">
-      <div class="weather-info">
-        <div class="info-box">
-          <span>Temperatura</span>
-          <strong>{{ clima.main.temp }}°</strong>
-        </div>
-        <div class="info-box">
-          <span>Sensibilidad termica</span>
-          <strong>{{ clima.main.feels_like }}°</strong>
-        </div>
-      </div>
-      <div class="weather-info">
-        <div class="info-box">
-          <span>Humedad</span>
-          <strong>{{ clima.main.humidity }}%</strong>
-        </div>
-        <div class="info-box">
-          <span>velocidad del viento</span>
-          <strong>{{ clima.wind.speed }}m/s</strong>
-        </div>
-      </div>
-    </div>
-  </div>
+<div *ngIf="isLoading" class="spinner-container">
+  <div class="spinner"></div>
+  <p>Cargando, por favor espere...</p>
 </div>
-  <div *ngIf="currency$ | async as currency" class="col-12 col-sm-6 col-md-6 col-xl-6 mb-6">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col" style="text-align: center;">{{ (clima$ | async)?.name }}, {{ (clima$ | async)?.sys.country }}</th>
-        </tr>
-      </thead>
-      <tbody class=".table-hover">
-        <tr>
-          <th scope="row">Presupuesto Moneda Local (COP)</th>
-          <td>${{currency.query.amount}}</td>
-        </tr>
-        <tr>
-          <th scope="row">Moneda Local del Destino</th>
-          <td>{{currency.query.to}}</td>
-        </tr>
-        <tr>
-          <th scope="row">Presupuesto Moneda Extranjera</th>
-          <td>{{currency.result}} {{currency.simbolo_moneda}}</td>
-        </tr>
-        <tr>
-            <th scope="row">Tasa de Cambio</th>
-            <td>{{currency.info.rate}}</td>
+<div *ngIf="!isLoading">
+  <div class="row mt-3">
+    <div class="col-12 col-sm-6 col-md-6 col-xl-6 mb-6">
+      <div *ngIf="clima$ | async as clima" class="weather-card">
+        <h2>{{ clima.name }}, {{ clima.sys.country }}</h2>
+        <div class="weather-icon">
+          <img [src]="weather.src" [alt]="weather.alt" />
+        </div>
+        <h3>{{ clima.weather[0].description }}</h3>
+        <h4>{{ clima.main.temp_min }}°/{{ clima.main.temp_max }}°</h4>
+        <div class="mt-4">
+          <div class="weather-info">
+            <div class="info-box">
+              <span>Temperatura</span>
+              <strong>{{ clima.main.temp }}°</strong>
+            </div>
+            <div class="info-box">
+              <span>Sensibilidad termica</span>
+              <strong>{{ clima.main.feels_like }}°</strong>
+            </div>
+          </div>
+          <div class="weather-info">
+            <div class="info-box">
+              <span>Humedad</span>
+              <strong>{{ clima.main.humidity }}%</strong>
+            </div>
+            <div class="info-box">
+              <span>velocidad del viento</span>
+              <strong>{{ clima.wind.speed }}m/s</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      *ngIf="currency$ | async as currency"
+      class="col-12 col-sm-6 col-md-6 col-xl-6 mb-6"
+    >
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" style="text-align: center">
+              {{ (clima$ | async)?.name }}, {{ (clima$ | async)?.sys.country }}
+            </th>
           </tr>
-      </tbody>
-    </table>
+        </thead>
+        <tbody class=".table-hover">
+          <tr>
+            <th scope="row">Presupuesto Moneda Local (COP)</th>
+            <td>${{ currency.query.amount }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Moneda Local del Destino</th>
+            <td>{{ currency.query.to }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Presupuesto Moneda Extranjera</th>
+            <td>{{ currency.result }} {{ currency.simbolo_moneda }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Tasa de Cambio</th>
+            <td>{{ currency.info.rate }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
