@@ -1,17 +1,25 @@
-<nav class="navbar">
-  <div>
-    
-  </div>
-</nav>
+<nav class="navbar p-2">
+      <div class="idioma row">
+        <select id="idioma" class="col-12 form-select" name="idioma" (change)="changeLanguage($event)" required>
+          <option value="es" class="bg-transparent border-0 text-gray fw-bold">
+            Español
+          </option>
+          <option value="en" class="bg-transparent border-0 text-gray fw-bold">
+            Inglés - English
+          </option>
+        </select>
+      </div>
+  </nav>
+  
 
 <div class="container">
-  <h3 class="mt-4">Bienvenido, Marlon Torino</h3>
-  <h5 class="mt-4">Busquedas Recientes</h5>
+  <h3 class="mt-4">{{'saludo' | translate}}, Marlon Torino</h3>
+  <h5 class="mt-4">{{'busqueda' | translate}}</h5>
   
   
-<app-historial></app-historial>
+<app-historial [idioma]="idioma"></app-historial>
 <div
   class="row mt-4 justify-content-center">
-  <app-info-viaje></app-info-viaje>
+  <app-info-viaje [idioma]="idioma"></app-info-viaje>
 </div>
 </div>

@@ -5,7 +5,7 @@ export const clima: Record<string, string> = {
     Rain: '🌧️',
     Drizzle: '🌦️', 
     Atmosphere: '🌪️',
-    Clouds: '🌫️',
+    Clouds: '☁️',
     null: '🌤️'
   };
   

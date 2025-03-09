@@ -1,3 +1,7 @@
 .navbar{
-    background: linear-gradient(90deg, #7ed957, #0097b2);
+    background: linear-gradient(90deg, #0073a4, #245289);
+}
+
+.idioma {
+    margin-left: 2%;
 }

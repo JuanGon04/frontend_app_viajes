@@ -1,0 +1,19 @@
+{
+  "sensacion": "Sensación Térmica",
+  "saludo": "Bienvenido",
+  "busqueda": "Busquedas Recientes",
+  "cargar_historial": "Cargando historial...",
+  "seleccionar_ciudad": "-- Seleccione la Ciudad Destino --",
+  "ciudad_destino": "Ciudad Destino",
+  "presupuesto_viaje": "Presupuesto de Viaje",
+  "bton_consultar": "Consultar",
+  "cargar_resultado": "Cargando, por favor espere...",
+  "temperatura": "Temperatura",
+  "humedad": "Humedad",
+  "velocidad_viento": "Velocidad del Viento",
+  "presupuesto_moneda_local": "Presupuesto Moneda Local (COP)",
+  "moneda_local": "Moneda Local del Destino",
+  "presupuesto_moneda_extranjera": "Presupuesto Moneda Extranjera",
+  "tasa": "Tasa de Cambio",
+  "moneda_destino": "Moneda Local del Destino"
+}

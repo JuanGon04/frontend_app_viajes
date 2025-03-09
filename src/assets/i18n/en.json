@@ -1,0 +1,19 @@
+{
+  "sensacion": "Thermal sensation",
+  "saludo": "Welcome",
+  "busqueda": "Recent Searches",
+  "cargar_historial": "Loading history...",
+  "seleccionar_ciudad": "-- Select the Destination City --",
+  "presupuesto_viaje": "Travel Budget",
+  "ciudad_destino": "Destination City",
+  "bton_consultar": "Consult",
+  "cargar_resultado": "Loading, please wait...",
+  "temperatura": "Temperature",
+  "humedad": "Humidity",
+  "velocidad_viento": "Wind Speed",
+  "presupuesto_moneda_local": "Budget Local Currency (COP)",
+  "moneda_local": "Local Currency of Destination",
+  "presupuesto_moneda_extranjera": "Foreign Currency Budget",
+  "tasa": "Exchange Rate",
+  "moneda_destino": "Local Currency Destination"
+}

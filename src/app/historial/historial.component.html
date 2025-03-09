@@ -1,25 +1,24 @@
 <div *ngIf="isLoading" class="loading-container">
   <div class="spinner"></div>
-  <p>Cargando historial...</p>
+  <p>{{'cargar_historial' | translate}}</p>
 </div>
 
 <div *ngIf="!isLoading" class="fade-in">
   <div class="container mt-4">
     <div class="row">
-      <div class="col-md-3 mb-3" *ngFor="let historial of historial$ | async">
-        <div class="weather-card">
+      <div class="col-md-3 mb-3" *ngFor="let historial of historial$ | async; let i = index">
+        <div class="weather-card" #item_historial>
           <h2>{{ historial.ciudad }}, {{ historial.pais }}</h2>
           <div class="weather-icon">{{obtenerweather(historial)}}</div>
           <div class="temperature">{{ historial.temperatura }}°C</div>
           <div class="details">
-            {{ historial.condicion_meteorologica }}<br />{{
+            {{ clima_translate[i] }}<br />{{
               historial.temperatura_minima
-            }}° / {{ historial.temperatura_maxima }}°<br />Sensación térmica
+            }}° / {{ historial.temperatura_maxima }}°<br />{{'sensacion' | translate}}
             {{ historial.sensacion_termica }}°
           </div>
-          <div class="price">
-            💰 {{ historial.presupuesto_moneda_extranjera }}
-            {{ historial.simbolo_moneda }}
+          <div class="price" #price>
+            💰 {{ historial.presupuesto_moneda_extranjera | currency:historial.codigo_divisa}}
           </div>
         </div>
       </div>

@@ -1,11 +1,21 @@
 .weather-card {
-    width: 220px;
-    background: linear-gradient(to bottom right, #50a3f3, #78e5e5);
     color: black;
     text-align: center;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bg-temp-low{
+    background: radial-gradient(circle at center, #5de0e6, #004aad);
+}
+
+.bg-temp-middle{
+    background: radial-gradient(circle at center, #7ed957, #0097b2);
+} 
+
+.bg-temp-higt{
+    background: radial-gradient(circle at center, #ffde59, #ff914d);
 }
 
 .weather-card h2 {
