@@ -2,10 +2,8 @@ import {
   AfterViewChecked,
   Component,
   ElementRef,
-  Input,
   OnInit,
   Renderer2,
-  SimpleChanges,
   ViewChild,
 } from '@angular/core';
 import { combineLatest, map, Observable, Subscription, switchMap } from 'rxjs';
