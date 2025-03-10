@@ -1,27 +1,70 @@
-# FrontendAppViajes
+# frontend_app_viajes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+## Descripción
+Frontend de una aplicación para gestionar viajes, proporcionando información sobre el clima y presupuesto en diferentes ciudades. Desarrollado con **Angular 19** y **Bootstrap**.
 
-## Development server
+## Tecnologías utilizadas
+- **Angular 19** (Framework frontend)
+- **TypeScript** (Lenguaje de programación)
+- **Bootstrap** (Estilos y diseño responsivo)
+- **Ngx-Translate** (Internacionalización)
+- **RxJS** (Manejo de datos reactivos)
+- **HTTPClient** (Consumo de APIs)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instalación y configuración
+### Prerrequisitos
+- **Node.js** (v18 o superior)
+- **Angular CLI** (v19 o superior)
 
-## Code scaffolding
+### Pasos de instalación
+```sh
+# Clonar el repositorio
+git clone https://github.com/JuanGon04/frontend_app_viajes.git
+cd frontend_app_viajes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Instalar dependencias
+npm install
 
-## Build
+# Ejecutar el servidor de desarrollo
+ng serve --open
+```
+Esto iniciará el proyecto en `http://localhost:4200/`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Uso del proyecto
+1. **Selecciona un destino de viaje**.
+2. **Consulta el clima** de la ciudad elegida.
+3. **Gestiona el presupuesto** en la moneda local.
 
-## Running unit tests
+## Arquitectura y estructura del código
+El proyecto sigue la estructura estándar de Angular:
+```
+frontend_app_viajes/
+│── src/
+│   ├── app/              # Componentes y servicios
+│   │   ├── components/   # Componentes UI
+│   │   ├── services/     # Servicios (HTTP, manejo de datos)
+│   ├── assets/           # Recursos estáticos (i18n, imágenes)
+│   ├── environments/     # Configuración de entornos
+│   ├── main.ts           # Punto de entrada
+│   ├── styles.css        # Estilos globales
+│── angular.json          # Configuración de Angular
+│── package.json          # Dependencias y scripts
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Principales funcionalidades
+- **Internacionalización** con `ngx-translate`
+- **Manejo de estados** con `RxJS`
+- **Consumo de APIs** para obtener información climática y de cambio de moneda
+- **Interfaz responsiva** con `Bootstrap`
 
-## Running end-to-end tests
+## Configuración de internacionalización
+Los archivos de traducción deben estar en `src/assets/i18n/`, por ejemplo:
+```
+assets/i18n/
+│── es.json  # Español
+│── en.json  # Inglés
+```
+Para agregar un idioma, simplemente crea un nuevo archivo JSON con las traducciones correspondientes.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Licencia
+Este proyecto está bajo la licencia MIT.

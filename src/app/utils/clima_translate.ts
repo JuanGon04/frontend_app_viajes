@@ -20,7 +20,7 @@ export const climaEs: Record<string, string> = {
     null: ''
   };
   
-  export function ClimaTranslate(tipoClima: string, idioma:string):string {
+  export function ClimaTranslate(tipoClima: string, idioma:string | null):string {
     if(idioma==='en')
         return climaEn[tipoClima];
     

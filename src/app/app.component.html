@@ -10,16 +10,5 @@
         </select>
       </div>
   </nav>
-  
 
-<div class="container">
-  <h3 class="mt-4">{{'saludo' | translate}}, Marlon Torino</h3>
-  <h5 class="mt-4">{{'busqueda' | translate}}</h5>
-  
-  
-<app-historial [idioma]="idioma"></app-historial>
-<div
-  class="row mt-4 justify-content-center">
-  <app-info-viaje [idioma]="idioma"></app-info-viaje>
-</div>
-</div>
+<router-outlet></router-outlet>

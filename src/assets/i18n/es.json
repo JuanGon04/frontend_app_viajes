@@ -12,8 +12,9 @@
   "humedad": "Humedad",
   "velocidad_viento": "Velocidad del Viento",
   "presupuesto_moneda_local": "Presupuesto Moneda Local (COP)",
-  "moneda_local": "Moneda Local del Destino",
   "presupuesto_moneda_extranjera": "Presupuesto Moneda Extranjera",
   "tasa": "Tasa de Cambio",
-  "moneda_destino": "Moneda Local del Destino"
+  "moneda_destino": "Moneda Local del Destino",
+  "volver": "Volver al Inicio",
+  "siguiente": "Siguiente"
 }

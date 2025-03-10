@@ -1,51 +1,9 @@
-<div *ngIf="ciudades$ | async as ciudad" class="row">
-  <div class="col-12 col-sm-6 col-md-6 col-xl-5 mb-6">
-    <div class="form-floating mb-3">
-      <select #ciudad_id id="ciudad" class="form-select" name="ciudad" required>
-        <option value="" selected disabled style="display: none">
-          {{'seleccionar_ciudad' | translate}}
-        </option>
-        <option *ngFor="let item of ciudad" [value]="item.id">
-          {{ item.ciudad }}
-        </option>
-      </select>
-      <label for="ciudad" class="text-secondary">{{'ciudad_destino' | translate}}</label>
-    </div>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-6 col-xl-5 mb-6">
-    <div class="form-floating mb-3">
-      <input
-        type="number"
-        id="presupuesto"
-        name="presupuesto"
-        class="form-control"
-        required
-        pattern="^\d+([.,])?$"
-        [attr.placeholder]="'presupuesto_viaje' | translate"
-        #presupuesto
-      />
-      <label for="presupuesto" class="text-secondary"
-        >{{'presupuesto_viaje' | translate}}</label
-      >
-    </div>
-  </div>
-
-  <div class="col-12 col-sm-6 col-md-6 col-xl-2 mb-6">
-    <button
-      (click)="obtenerValores(presupuesto.value, ciudad_id.value)"
-      type="button"
-      class="btn btn-primary"
-    >
-      {{'bton_consultar' | translate}}
-    </button>
-  </div>
-</div>
-
 <div *ngIf="isLoading" class="spinner-container">
   <div class="spinner"></div>
   <p>{{'cargar_resultado' | translate}}</p>
 </div>
+
+<div class="container mt-3">
 <div *ngIf="!isLoading">
   <div class="row mt-3 mb-3">
     <div class="col-12 col-xl-6 mb-6">
@@ -110,9 +68,20 @@
             </tr>
           </tbody>
         </table>
+        <div>
+          <button
+            (click)="volverAlInicio()"
+            type="button"
+            class="btn btn-primary"
+          >
+            {{'volver' | translate}}
+          </button>
+        </div>
       </div>
     </div>
+    
   </div>
+</div>
 </div>
 
 

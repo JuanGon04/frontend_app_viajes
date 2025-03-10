@@ -12,8 +12,9 @@
   "humedad": "Humidity",
   "velocidad_viento": "Wind Speed",
   "presupuesto_moneda_local": "Budget Local Currency (COP)",
-  "moneda_local": "Local Currency of Destination",
   "presupuesto_moneda_extranjera": "Foreign Currency Budget",
   "tasa": "Exchange Rate",
-  "moneda_destino": "Local Currency Destination"
+  "moneda_destino": "Local Currency Destination",
+  "volver": "Back to top",
+  "siguiente": "Next"
 }
